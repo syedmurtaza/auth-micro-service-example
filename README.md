@@ -104,5 +104,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
 Nest Sample microservices [MIT licensed](https://github.com/RicardoJardim/NestMicroservice/)
-
-<https://medium.com/google-developer-experts/nextjs-with-api-gateway-7a8524c835fe>
