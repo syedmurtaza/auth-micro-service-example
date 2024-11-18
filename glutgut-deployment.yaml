@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: glutgut-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: glutgut-service
+  template:
+    metadata:
+      labels:
+        app: glutgut-service
+    spec:
+      containers:
+        - name: glutgut-service
+          image: glut-gut
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: glutgut-service
+spec:
+  selector:
+    app: glutgut-service
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000

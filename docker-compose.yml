@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/glut-gut
+      - /glut-gut/node_modules
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - DB_USERNAME=root
+      - DB_PASSWORD=pakistan001*
+      - DB_NAME=glutgut
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
